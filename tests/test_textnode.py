@@ -1,6 +1,6 @@
 import unittest
 
-from textnode import TextNode
+from src.textnode import TextNode
 
 
 class TestTextNode(unittest.TestCase):
@@ -24,10 +24,6 @@ class TestTextNode(unittest.TestCase):
       node2 = TextNode("all", "cases", "equal")
       self.assertEqual(node, node2)
     
-
-
-    
-
 
 
 if __name__ == "__main__":

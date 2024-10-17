@@ -1,7 +1,6 @@
 import unittest
 
-import unittest.test
-from leafnode import LeafNode
+from src.leafnode import LeafNode
 
 class TestLeafNode(unittest.TestCase):
   def test_create_node_raise(self):

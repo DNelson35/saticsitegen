@@ -1,5 +1,5 @@
 import unittest
-from htmlnode import HTMLNode
+from src.htmlnode import HTMLNode
 
 class TestHtmlNode(unittest.TestCase):
   def create_html_node(self):
@@ -16,3 +16,5 @@ class TestHtmlNode(unittest.TestCase):
     self.assertEqual(prop_str, ' href="https://www.testing.com" target="_blank"' )
     
 
+if __name__ == '__main__':
+  unittest.main()
