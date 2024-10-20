@@ -10,7 +10,7 @@ class TextType(Enum):
   IMAGE = "image"
 
 class TextNode():
-  def __init__(self, text, text_type, url=None):
+  def __init__(self, text, text_type: TextType, url=None):
     self.text = text
     self.text_type = text_type
     self.url = url
@@ -42,5 +42,7 @@ class TextNode():
         return LeafNode("img", "", {"src": self.url, "alt": self.text})
       case _:
         raise Exception(f"Unknown TextType: {self.text_type}")
+      
+  
 
   
