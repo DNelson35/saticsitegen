@@ -110,3 +110,11 @@ def split_node_links(nodes: list[TextNode]):
 
   return node_list
 
+def text_to_textnodes(txt):
+  text_node = TextNode(txt, TextType.TEXT)
+  node_list = split_nodes_delimiter([text_node], '**', TextType.BOLD)
+  node_list = split_nodes_delimiter(node_list, '*', TextType.ITALIC)
+  node_list = split_nodes_delimiter(node_list, "`", TextType.CODE)
+  node_list = split_node_images(node_list)
+  node_list = split_node_links(node_list)
+  return node_list
