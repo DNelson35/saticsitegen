@@ -6,10 +6,10 @@ class TestHtmlNode(unittest.TestCase):
   def setUp(self):
     self.node = HTMLNode("<h1>", "testing", ["node1", "node2", "node3"], {"href": "https://www.testing.com", "target": "_blank"})
 
-  def create_html_node(self):
+  def test_create_html_node(self):
     self.assertIsInstance(self.node, HTMLNode, f"Expecting node to be instance of HTMLNode got {type(self.node)}")
 
-  def create_empty_node(self):
+  def test_create_empty_node(self):
     node = HTMLNode()
     self.assertIsInstance(node, HTMLNode, f"Expecting node to be instance of HTMLNode got {type(self.node)}")
   
