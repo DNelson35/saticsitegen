@@ -36,12 +36,15 @@ class TestTextNode(unittest.TestCase):
     node2 = TextNode("this", "bold")
     self.assertNotEqual(node, node2)
 
-  def all_case_eq(self):
+  def test_all_case_eq(self):
     node = TextNode("all", "cases", "equal")
     node2 = TextNode("all", "cases", "equal")
+    print(TextType.TEXT)
     self.assertEqual(node, node2)
 
   def test_textnode_to_htmlnode(self):
-      for text_node, expected in self.test_cases:
-         self.assertEqual(text_node.text_node_to_html_node(), expected)
+    for text_node, expected in self.test_cases:
+      self.assertEqual(text_node.text_node_to_html_node(), expected)
+
+  
     
