@@ -22,3 +22,4 @@ class TestLeafNode(unittest.TestCase):
     string = node2.to_html()
     self.assertEqual(html_tag, '''<a href="https://www.google.com">click</a>''')
     self.assertEqual(string, "this is a test")
+
